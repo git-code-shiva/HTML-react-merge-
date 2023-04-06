@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IWCN Task-1</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        const EditableTable = () => {
+
+            const [data,setData] = React.useState({
+                month1:['','',''],
+                onboard_call:['','',''],
+                google_console_access:['','',''],
+                google_analytics_access:['','',''],
+                web_access:['','',''],
+                tech_audit:['','',''],
+                tag_analysis:['','',''],
+                comptetior_analysis:['','',''],
+                text_mapping:['','',''],
+                studio_report:['','',''],
+                site_optimization:['','',''],
+                page_optimization:['','',''],
+                content_creation:['','',''],
+                content_publishing:['','',''],
+                press_release:['','',''],
+                auth_placement:['','',''],
+                review_mngmnt:['','',''],
+                index_link:['','',''],
+                video_recap:['','',''],
+            })
+
+            // const handleSubmit= async(e)=>{
+            //     e.preventDefault();
+            //    await axios.post("/api",{data.}).then((res)=>console.log(res.data.)).catch((err)=>console.log(err))
+            // }
+
+            // const handleInputChange=(event, field,index)=>{
+            //     const {value} = event.target;
+            //     setData(prevData=>{
+            //         const newData = {...prevData};
+            //         newData[field][index] = value;
+            //         return newData;
+            //     })
+            // }
+            return (
+                <>
+                <table>
+                    <tr>
+                        <th>Month 1</th>
+                        <input type="text" name="" id="" value={data.month1[0]} onChange={(e)=>handleInputChange(e,month1,0)}/>
+                        <input type="text" name="" id="" value={data.month1[1]} onChange={(e)=>handleInputChange(e,month1,1)}/>
+                        <input type="text" name="" id="" value={data.month1[2]} onChange={(e)=>handleInputChange(e,month1,2)}/>
+                    </tr>
+                    <tr>
+                        <th>Onboarding Call</th>
+                        <input type="text" name="" id="" value={data.onboard_call[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.onboard_call[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.onboard_call[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Google search console acsess</th>
+                        <input type="text" name="" id="" value={data.google_console_access[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.google_console_access[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.google_console_access[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Google Analytics Access</th>
+                        <input type="text" name="" id="" value={data.google_analytics_access[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.google_analytics_access[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.google_analytics_access[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Website Access</th>
+                        <input type="text" name="" id="" value={data.web_access[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.web_access[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.web_access[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Technical Audit</th>
+                        <input type="text" name="" id="" value={data.tech_audit[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.tech_audit[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.tech_audit[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Anchor tag and Semantic Analysis</th>
+                        <input type="text" name="" id="" value={data.tag_analysis[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.tag_analysis[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.tag_analysis[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Competitor Analysis</th>
+                        <input type="text" name="" id="" value={data.comptetior_analysis[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.comptetior_analysis[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.comptetior_analysis[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Anchor Text/URL Mapping</th>
+                        <input type="text" name="" id="" value={data.text_mapping[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.text_mapping[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.text_mapping[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Google Data. Studio Report + Local Reporting Suite</th>
+                        <input type="text" name="" id="" value={data.studio_report[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.studio_report[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.studio_report[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Site level Optimization</th>
+                        <input type="text" name="" id="" value={data.site_optimization[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.site_optimization[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.site_optimization[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>On Page Optimization</th>
+                        <input type="text" name="" id="" value={data.page_optimization[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.page_optimization[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.page_optimization[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Content Creation</th>
+                        <input type="text" name="" id="" value={data.content_creation[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.content_creation[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.content_creation[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Content Publishing</th>
+                        <input type="text" name="" id="" value={data.content_publishing[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.content_publishing[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.content_publishing[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Premium Press Release</th>
+                        <input type="text" name="" id="" value={data.press_release[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.press_release[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.press_release[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Authority Niche Placements</th>
+                        <input type="text" name="" id="" value={data.auth_placement[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.auth_placement[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.auth_placement[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Review Management</th>
+                        <input type="text" name="" id="" value={data.review_mngmnt[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.review_mngmnt[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.review_mngmnt[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Index Links</th>
+                        <input type="text" name="" id="" value={data.index_link[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.index_link[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.index_link[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                    <tr>
+                        <th>Video Recap</th>
+                        <input type="text" name="" id="" value={data.video_recap[0]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.video_recap[1]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                        <input type="text" name="" id="" value={data.video_recap[2]} onChange={(e)=>handleInputChange(e.target.value)}/>
+                    </tr>
+                </table>
+
+            {/** <button onClick={handleSubmit} type="submit">Submit</button>**/}
+                  
+                </>
+            );
+        };
+
+        ReactDOM.render(<EditableTable />, document.getElementById('root'));
+
+    </script>
+</body>
+
+</html>
